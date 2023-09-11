@@ -4,6 +4,12 @@ let currentImageIndex = 0;
 document.querySelector("p").textContent = currentImageIndex;
 let image = document.querySelector("img");
 
+let intervalDuration = 1000;
+let input = document.querySelector("input");
+input.addEventListener("input", function () {
+    intervalDuration = this.value * 1000;
+});
+
 function moveForward () {
     currentImageIndex = (currentImageIndex + 1) % imagesArray.length;
     image.src = imagesArray[currentImageIndex];
@@ -23,13 +29,13 @@ function moveBack () {
 document.getElementById("forwardButton").addEventListener("click", moveForward);
 document.getElementById("backButton").addEventListener("click", moveBack);
 document.getElementById("autoBackButton").addEventListener("click", function () {
-    let backInterval = setInterval(moveBack, 1000);
+    let backInterval = setInterval(moveBack, intervalDuration);
     document.getElementById("stopButton").addEventListener("click", function () {
         clearInterval(backInterval);
     });
 });
 document.getElementById("autoForwardButton").addEventListener("click", function () {
-    let forwardInterval = setInterval(moveForward, 1000);
+    let forwardInterval = setInterval(moveForward, intervalDuration);
     document.getElementById("stopButton").addEventListener("click", function () {
         clearInterval(forwardInterval);
     });
