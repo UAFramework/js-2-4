@@ -1,5 +1,5 @@
 #root {
-    height: 15em;
+    height: 20em;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -16,5 +16,12 @@
 button {
     align-self: end;
     padding: 0.8rem 1.5rem;
+    background-color: chocolate;
+}
+
+select {
+    margin-top: 1rem;
+    align-self: end;
+    padding: 0.5rem 1rem;
     background-color: chocolate;
 }
