@@ -17,9 +17,41 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
+let options = {
+  selectValue: "autoOff"
+}
+
+let select = document.querySelector("select");
+select.addEventListener("change", function () {
+  options.selectValue = select.value;
+});
+
 function pickFromArray(choices) {
+  let randomQuote = document.getElementById("randomQuote");
+  randomQuote.textContent = "";
+  randomQuote.textContent = choices[Math.floor(Math.random() * choices.length)].quote;
+
+  let author = document.getElementById("author");
+  author.textContent = "";
+  author.textContent = choices[Math.floor(Math.random() * choices.length)].author;
+  
   return choices[Math.floor(Math.random() * choices.length)];
 }
+
+window.onload = function() {
+  pickFromArray(quotes);
+};
+
+document.querySelector("button").addEventListener("click", function () {
+  if (options.selectValue === "autoOff") {
+    pickFromArray(quotes);
+  } else {
+    setInterval(function() {
+      pickFromArray(quotes);
+    }, 60000);
+  }
+});
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!

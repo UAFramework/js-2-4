@@ -11,7 +11,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div id = "root">
+      <h1>Image Carousel</h1>
+      <img src="assets/cute-cat-a.png" alt="image">
+      <p></p>
+      <label for = "input">Set interval for slideshow, sec
+      <input type = "number" id = "input">
+      </label>
+      <div id = "allButtons">
+        <button id = "autoBackButton">Auto Back</button>
+        <button id = "backButton">Back</button>
+        <button id = "stopButton">Stop</button>
+        <button id = "forwardButton">Forward</button>
+        <button id = "autoForwardButton">Auto Forward</button>
+      </div>
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>

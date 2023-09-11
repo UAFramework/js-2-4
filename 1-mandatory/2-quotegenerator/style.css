@@ -1,1 +1,27 @@
-/** Write your CSS in here **/
+#root {
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 15% 10%;
+    padding: 2rem;
+    background-color: blanchedalmond;
+}
+
+#author {
+    align-self: end;
+    font-size: larger;
+}
+
+button {
+    align-self: end;
+    padding: 0.8rem 1.5rem;
+    background-color: chocolate;
+}
+
+select {
+    margin-top: 1rem;
+    align-self: end;
+    padding: 0.5rem 1rem;
+    background-color: chocolate;
+}
