@@ -1,3 +1,12 @@
+const getNewQuote = async () =>
+{const indx = Math.floor(Math.random()*quotes.length);
+    document.getElementById("quoteDisplay").innerHTML=quotes[indx].quote;
+    document.getElementById("authorDisplay").innerHTML="~ "+quotes[indx].author;
+}
+getNewQuote();
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -19,7 +28,7 @@
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
-}
+ }
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
