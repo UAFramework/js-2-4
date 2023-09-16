@@ -14,67 +14,25 @@
     <div class="container">
       <h1>Display Carusel. Level1.</h1>
       <div class="slider">
-          <img class="active" src="https://media.istockphoto.com/id/1405559968/photo/regatta-sailing-ship-yachts-with-white-sails-at-opened-sea-aerial-view-of-sailboat-in-windy.webp?b=1&s=170667a&w=0&k=20&c=XpzjTDXLxaxSrFVOMu1hmQzzWppKQl0QcfOd-EXgAcY=" alt="" />
-          <img src="https://media.istockphoto.com/id/1412049078/photo/regatta-sailing-ship-yachts-with-white-sails-at-opened-sea-aerial-view-of-sailboat-in-windy.webp?b=1&s=170667a&w=0&k=20&c=n1bfQSuiJT_d1Q_dg6UnPmHcobpsy7W7PGTV-0Kc89k=" alt="" />
-          <img src="https://media.istockphoto.com/id/1443357785/photo/aerial-view-of-sailing-race-international-sailing-race-sailing-race-in-the-bosphorus-water.webp?b=1&s=170667a&w=0&k=20&c=PuIAmiDlY5hrEiSDVzrlGkE-QTO9kTfI8mFO4LKBjVg=" alt="" />
-          <img src="https://media.istockphoto.com/id/1437537929/photo/aerial-view-sailboat-moving-on-the-sea.webp?b=1&s=170667a&w=0&k=20&c=9op9U-BblJLdP3e2Uc369qkGUxIPPs1W_ZjslAywKd0=" alt="" />
-          <img src="https://media.istockphoto.com/id/1366992301/photo/sailing-with-sailboat.webp?b=1&s=170667a&w=0&k=20&c=_gHM_RS9OOfqDCr-z0umItbeek_u_C9icbwQdL81-Vg=" alt="" />
+          <img class="active" src="https://media.istockphoto.com/id/1405559968/photo/regatta-sailing-ship-yachts-with-white-sails-at-opened-sea-aerial-view-of-sailboat-in-windy.webp?b=1&s=170667a&w=0&k=20&c=XpzjTDXLxaxSrFVOMu1hmQzzWppKQl0QcfOd-EXgAcY=" alt="" /><p>sail0</p>
+          <img src="https://media.istockphoto.com/id/1412049078/photo/regatta-sailing-ship-yachts-with-white-sails-at-opened-sea-aerial-view-of-sailboat-in-windy.webp?b=1&s=170667a&w=0&k=20&c=n1bfQSuiJT_d1Q_dg6UnPmHcobpsy7W7PGTV-0Kc89k=" alt="" /><p>sail1</p>
+          <img src="https://media.istockphoto.com/id/1443357785/photo/aerial-view-of-sailing-race-international-sailing-race-sailing-race-in-the-bosphorus-water.webp?b=1&s=170667a&w=0&k=20&c=PuIAmiDlY5hrEiSDVzrlGkE-QTO9kTfI8mFO4LKBjVg=" alt="" /><p>sail2</p>
+          <img src="https://media.istockphoto.com/id/1437537929/photo/aerial-view-sailboat-moving-on-the-sea.webp?b=1&s=170667a&w=0&k=20&c=9op9U-BblJLdP3e2Uc369qkGUxIPPs1W_ZjslAywKd0=" alt="" /><p>sail3</p>
+          <img src="https://media.istockphoto.com/id/1366992301/photo/sailing-with-sailboat.webp?b=1&s=170667a&w=0&k=20&c=_gHM_RS9OOfqDCr-z0umItbeek_u_C9icbwQdL81-Vg=" alt="" /><p>sail4</p>
         </div>
         <div><nav class="slider-nav">
-          <ul>
-   <li class="arrow">
-     <button class="previous">Back</button>
-   </li>
-   <li class="arrow">
-     <button class="next">Forward</button>
-   </li>
- </ul>
-</nav></div>
+      <ul>
+      <li><button class="auto-previous" onclick="showPreviousItem()">AutoBack</button></li>
+      <li><button class="previous">Back</button></li>
+      <li><button class="stop" onclick="myStopFunction()">Stop</button></li>
+      <li><button class="next">Forward</button></li>   
+      <li><button class="auto-next" onclick="showNextItem()">AutoForward</button></li>
+      </ul>
+    </nav>
+    </div>
         
-      </div>
-     <!-- Write your HTML in here -->
-      <!--<div id="container">
-        <div class="slider">
-                  <div class="carousel">
-                  </div>
-        <div class="carousel">
-          </div>
-        <div class="carousel">
-          </div>
-        <div class="carousel">
-          </div><br>
-        <i id="prev" class="fa fa-chevron-left"></i>
-        <i id="next" class="fa fa-chevron-right"></i>
-      </div>
-      > -->
-
-  <!--<div class="move_manually">
-        <button id="change" onclick="function1()">Back</button>
-        <button id="change" onclick="function2()">Forward</button>
-        <button
-  type="button"
-  class="A">
-  Success
-</button>
-<button
-  type="button"
-  class="inline-block rounded bg-danger px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]">
-  Danger
-</button>
-<button
-  type="button"
-  class="inline-block rounded bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]">
-  Warning
-</button>
-<button
-  type="button"
-  class="inline-block rounded bg-info px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600 hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:bg-info-600 focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:bg-info-700 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]">
-  Info
-</button>
-      </div> -->    
-        
-      
-       </body>
+    </div>
+  </body>
     
     <script src="slideshow.js"></script>
   </body>

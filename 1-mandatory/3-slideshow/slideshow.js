@@ -1,45 +1,51 @@
 // Write your code here
 const items = document.querySelectorAll('img');
-const itemCount = items.length;
 const nextItem = document.querySelector('.next');
 const previousItem = document.querySelector('.previous');
+const autoNextItem = document.querySelector('.auto-next');
+// const previousItem = document.querySelector('.previous');
+// const previousItem = document.querySelector('.previous');
+//document.querySelector('.auto-next').addEventListener("click", ShowNextItem);
 let count = 0;
 
 function showNextItem() {
   items[count].classList.remove('active');
-  if(count < itemCount - 1) {
+  if(count < items.length - 1) {
     count++;
   } else {
     count = 0;
   }
-
   items[count].classList.add('active');
-  console.log(count);
-}
+ }
 
 function showPreviousItem() {
   items[count].classList.remove('active');
-
   if(count > 0) {
     count--;
   } else {
-    count = itemCount - 1;
+    count = items.length - 1;
   }
-
   items[count].classList.add('active');
-  console.log(count);
-}
-
-function keyPress(e) {
-  e = e || window.event;
-  
-  if (e.keyCode == '37') {
-    showPreviousItem();
-  } else if (e.keyCode == '39') {
-    showNextItem();
   }
-}
+
+  const myIntervalForward = setInterval(showNextItem, 5000);
+  const myIntervalBack = setInterval(showPreviousItem, 2000);
+
+  function myStopFunction() {
+    clearInterval(myIntervalBack);
+    clearInterval(myIntervalForward);
+  }
+// setInterval(showNextItem(), 10000);
+
+// function autoShowNextItem() {
+//   // check if an interval has already been set up
+//   if (!nIntervId) {
+//     nIntervId = setInterval(showNextItem(), 10000);
+//   }
+// }
 
 nextItem.addEventListener('click', showNextItem);
 previousItem.addEventListener('click', showPreviousItem);
-document.addEventListener('keydown', keyPress);
+myIntervalForward.addEventListener('click', showNextItem);
+// previousItem.addEventListener('click', showPreviousItem);
+// previousItem.addEventListener('click', autoShowNextItem);
