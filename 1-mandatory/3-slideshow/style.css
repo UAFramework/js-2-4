@@ -16,9 +16,8 @@ background: white;
 .container {
 display: flex;
 flex-direction: column;
-max-width: 800px;
+max-width: 850px;
 margin: 50px;
-
 }
 
 button {
@@ -36,11 +35,12 @@ margin: 10px;
 button span {
   display: flex;
   justify-content: space-evenly;
+  transform: translateX(0);
   transition: transform 0.3s ease;
 }
 
 .previous:hover span {
- /** transform: translateX(-10px) scale(1.2);**/
+ transform: translateX(-10px) scale(1.2);
 }
 
 .next:hover span {
@@ -59,8 +59,10 @@ button span {
   text-align: center;
 }
 
+
 img {
-  max-width: 100%;
+  width: 640px;
+  height: 480px;
   display: none;
   box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
 }
